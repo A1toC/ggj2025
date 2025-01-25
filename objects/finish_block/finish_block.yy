@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"bubble_died",
+  "%Name":"finish_block",
   "eventList":[],
   "managed":true,
-  "name":"bubble_died",
+  "name":"finish_block",
   "overriddenProperties":[],
   "parent":{
     "name":"物体",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite4",
-    "path":"sprites/Sprite4/Sprite4.yy",
+    "name":"finish",
+    "path":"sprites/finish/finish.yy",
   },
   "spriteMaskId":null,
   "visible":true,

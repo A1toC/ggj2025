@@ -1,8 +1,11 @@
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 0B13C291
-/// @DnDArgument : "expr" "dash_finished"
-if(dash_finished){	/// @DnDAction : YoYo Games.Movement.Set_Direction_Point
+/// @DnDInput : 2
+/// @DnDArgument : "expr" "tf_dash_finished"
+/// @DnDArgument : "expr_1" "tf_finished"
+/// @DnDArgument : "not_1" "1"
+if(tf_dash_finished && !(tf_finished)){	/// @DnDAction : YoYo Games.Movement.Set_Direction_Point
 	/// @DnDVersion : 1
 	/// @DnDHash : 780D91F2
 	/// @DnDParent : 0B13C291
@@ -64,13 +67,13 @@ var l7BBE209A_0;l7BBE209A_0 = keyboard_check_released(vk_space);if (l7BBE209A_
 	/// @DnDArgument : "speed" "speed_dash"
 	speed = speed_dash;
 
-	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDAction : YoYo Games.Instances.Set_Alarm
 	/// @DnDVersion : 1
-	/// @DnDHash : 14ECD549
+	/// @DnDHash : 382546D7
 	/// @DnDParent : 7BBE209A
-	/// @DnDArgument : "expr" "true"
-	/// @DnDArgument : "var" "dash_finished"
-	dash_finished = true;}
+	/// @DnDArgument : "steps" "dash_time*room_speed"
+	/// @DnDArgument : "alarm" "1"
+	alarm_set(1, dash_time*room_speed);}
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
@@ -86,16 +89,18 @@ if(tf_died){	/// @DnDAction : YoYo Games.Particles.Effect
 	/// @DnDArgument : "size" "1"
 	effect_create_above(0, x + 0, y + 0, 1, $FFFFFF & $ffffff);
 
-	/// @DnDAction : YoYo Games.Instances.Change_Instance
+	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDVersion : 1
-	/// @DnDHash : 04ECF57F
+	/// @DnDHash : 67DF467F
 	/// @DnDParent : 4D72D690
-	/// @DnDArgument : "objind" "bubble_died"
-	/// @DnDSaveInfo : "objind" "bubble_died"
-	instance_change(bubble_died, true);
+	instance_destroy();}
 
-	/// @DnDAction : YoYo Games.Movement.Set_Speed
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 3E19F963
+/// @DnDArgument : "expr" "tf_finished"
+if(tf_finished){	/// @DnDAction : YoYo Games.Movement.Set_Speed
 	/// @DnDVersion : 1
-	/// @DnDHash : 1AF3FA99
-	/// @DnDParent : 4D72D690
+	/// @DnDHash : 18D16864
+	/// @DnDParent : 3E19F963
 	speed = 0;}
