@@ -89,9 +89,16 @@ if(tf_died){	/// @DnDAction : YoYo Games.Particles.Effect
 	/// @DnDArgument : "size" "1"
 	effect_create_above(0, x + 0, y + 0, 1, $FFFFFF & $ffffff);
 
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 5B5A25FC
+	/// @DnDParent : 4D72D690
+	/// @DnDArgument : "var" "health_time"
+	health_time = 0;
+
 	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 	/// @DnDVersion : 1
-	/// @DnDHash : 67DF467F
+	/// @DnDHash : 38519112
 	/// @DnDParent : 4D72D690
 	instance_destroy();}
 

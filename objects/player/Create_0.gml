@@ -11,3 +11,9 @@
 tf_died = false;
 tf_dash_finished = true;
 tf_finished = false;
+
+/// @DnDAction : YoYo Games.Instances.Set_Alarm
+/// @DnDVersion : 1
+/// @DnDHash : 1449DA86
+/// @DnDArgument : "steps" "300"
+alarm_set(0, 300);
