@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"Object4",
+  "%Name":"walls_object",
   "eventList":[],
   "managed":true,
-  "name":"Object4",
+  "name":"walls_object",
   "overriddenProperties":[],
   "parent":{
     "name":"物体",
@@ -28,12 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_rock_big",
-    "path":"sprites/spr_rock_big/spr_rock_big.yy",
+    "name":"walls",
+    "path":"sprites/walls/walls.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_rock_big",
-    "path":"sprites/spr_rock_big/spr_rock_big.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
